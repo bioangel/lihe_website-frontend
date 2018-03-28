@@ -1,0 +1,1662 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 微软雅黑, 宋体;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+textarea,
+input,
+select,
+option,
+form,
+tr,
+th,
+td,
+img,
+em,
+i,
+var,
+strong {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: #000;
+}
+
+a,
+img {
+  border: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mar_b20 {
+  margin-bottom: 20px;
+}
+
+.main.mar_b50,
+.mar_b50 {
+  margin-bottom: 50px;
+}
+
+body a,
+body input {
+  outline: none;
+  blr: expression(this.onFocus=this.blur());
+}
+
+
+/*topBar*/
+
+.topBar {
+  width: 100%;
+  position: relative;
+}
+
+.topBarMain {
+  width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+}
+
+.topBarMainLt {
+  width: 40%;
+  float: left;
+}
+
+.logo,
+.selectCity {
+  float: left;
+}
+
+.logo img {
+  height: 50px;
+  padding: 7px 0;
+}
+
+.selectCity {
+  padding-top: 25px;
+}
+
+.lineCity {
+  color: #bed600;
+  padding-left: 30px;
+  float: left;
+}
+
+.lineCity span,
+.lineCity strong {
+  display: block;
+  font-size: 16px;
+  float: left;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.lineCity strong {
+  margin-right: 10px;
+}
+
+.lineCity strong i {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #bed600;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.lineCity span {
+  width: 30px;
+  height: 23px;
+  background: url(~/assets/images/icon.png) no-repeat;
+  background-size: 250px 250px;
+}
+
+.lineCity span.icon3 {
+  background-position: 0 0;
+}
+
+.lineCity span.icon4 {
+  background-position: -31px 0;
+}
+
+.selectBox {
+  overflow: hidden;
+  clear: both;
+  width: 360px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 55px;
+  padding: 30px 20px 20px;
+  display: none;
+}
+
+.selectBox ul li {
+  margin: 10px 0 15px;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.selectBox ul li a {
+  color: #000;
+  font-weight: 800;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.selectBox ul li a:hover {
+  color: #fff;
+  background: #bed600;
+}
+
+.selectBox ul li strong {
+  float: left;
+  display: inline-block;
+  padding-right: 5px;
+  text-align: right;
+  width: 70px;
+}
+
+.selectBox ul li strong:after {
+  width: 2px;
+  height: 13px;
+  background: #000;
+  display: inline-block;
+  content: "";
+  margin-left: 20px;
+}
+
+.selectBox ul li p {
+  width: 270px;
+  float: left;
+}
+
+.topBarMainRt {
+  width: 60%;
+  float: right;
+  text-align: right;
+  position: relative;
+}
+
+.topBarMainRt h2 {
+  color: #bed600;
+  font-size: 16px;
+  line-height: 70px;
+  margin-right: 60px;
+}
+
+.topBarMainRt h2:before {
+  width: 20px;
+  height: 20px;
+  background: url(~/assets/images/icon.png) -78px -2px no-repeat;
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-top: -3px;
+}
+
+
+
+/*移动下拉*/
+
+.RightLinks {
+  width: 70px;
+  height: 70px;
+  background: #c1d80d;
+  float: right;
+  position: relative;
+  margin-left: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.RightLinks .tit {
+  background: url(~/assets/images/icon.png) -105px -2px no-repeat;
+  width: 31px;
+  height: 25px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -12px;
+}
+
+.RightLinks .links {
+  width: 200px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
+
+.RightLinks .links a {
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+
+.RightLinks .links a:hover {
+  color: #fff;
+  background: #c1d80d;
+}
+
+
+/*topBar2*/
+
+.topBarMainRt.topBarLink {
+  text-align: left;
+}
+
+.topBarMainRt.topBarLink a {
+  color: #bed600;
+  font-size: 16px;
+  line-height: 70px;
+  padding: 0 10px;
+}
+
+.topBarLink h2 {
+  margin: 0;
+  display: inline-block;
+}
+
+
+/*end topBar*/
+
+
+/*footer*/
+
+.footer {
+  width: 100%;
+  background: #25432b;
+  height: 230px;
+  padding: 60px 0 30px;
+}
+
+.footerBox {
+  width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.footerLt {
+  width: 730px;
+  float: left;
+  padding-left: 80px;
+}
+
+.footerLt dl {
+  overflow: hidden;
+  line-height: 30px;
+  width: 33.33%;
+  float: left;
+  /*margin-right: 53px;*/
+  display: inline;
+}
+
+.footerLt dl dt {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.footerLt dl dd {
+  font-size: 15px;
+}
+
+.footerLt dl dd a {
+  color: #fff;
+}
+
+.footerLt dl dd a:hover {
+  text-decoration: underline;
+}
+
+.footerRt {
+  width: 360px;
+  float: left;
+}
+
+.footerRt p {
+  font-size: 15px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 8px;
+}
+
+.borderL {
+  border-bottom: solid 1px #fff;
+}
+
+.footerRt p img {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+.footerRt p strong,
+.footerRt p b {
+  font-size: 18px;
+  display: block;
+  line-height: 30px;
+}
+
+.footerRt p span {
+  display: block;
+  line-height: 30px;
+}
+
+.footerRt p span i,
+.footerShI span i {
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background: url(~/assets/images/icon.png) no-repeat;
+  vertical-align: middle;
+}
+
+.footerRt p span i.fIcon1,
+.footerShI span i.fIcon1 {
+  background-position: 0 -29px;
+}
+
+.footerRt p span i.fIcon2,
+.footerShI span i.fIcon2 {
+  background-position: -21px -29px;
+}
+
+.footerShow {
+  height: 56px;
+  line-height: 56px;
+  width: 100%;
+}
+
+.footerShow p {
+  width: 1200px;
+  margin: 0 auto;
+  color: #25432a;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+/*Two footer*/
+
+.TwoFooter .footerLt dl {
+  width: 25%;
+}
+
+.footerShI a {
+  display: block;
+  margin: 6px 0;
+  text-align: center;
+  background: url(~/assets/images/icon.png) no-repeat;
+  background-size: 120px 120px;
+}
+
+.footerShI a.icon1 {
+  width: 34px;
+  height: 27px;
+  background-position: 0 -17px;
+  margin-top: 1px;
+}
+
+.footerShI a.icon2 {
+  width: 37px;
+  height: 30px;
+  background-position: -36px -18px;
+}
+
+.footerShI a.icon3 {
+  width: 31px;
+  height: 31px;
+  background-position: 0 -49px;
+}
+
+.footerShI a.icon4 {
+  width: 32px;
+  height: 27px;
+  background-position: -34px -49px;
+  margin-top: 1px;
+}
+
+.TwoFooter .footerRt p img {
+  position: inherit;
+  margin-left: 8px;
+}
+
+
+/*end Two footer*/
+
+
+/* There footer*/
+
+.ThereFooter .footerLt dl {
+  width: 20%;
+}
+
+.ThereFooter .footerLt dl.footerShI {
+  width: 30%;
+}
+
+.ThereFooter .footerLt {
+  padding-left: 0;
+  width: 810px;
+}
+
+.ThereFooter .footerRt {
+  width: 360px;
+}
+
+.ThereFooter .footerRt p img {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.mar_t30 {
+  margin-top: 30px;
+}
+
+.wxdw {
+  margin-top: 90px;
+}
+
+
+/*end There footer*/
+
+
+/*last footer*/
+
+.ThereFooter.LastFooter .footerLt {
+  padding-left: 0;
+  width: 810px;
+}
+
+
+/*end last footer*/
+
+
+/*end footer*/
+
+
+/*GoTop*/
+
+.GoTop {
+  width: 375px;
+  position: fixed;
+  bottom: 260px;
+  right: 40px;
+  z-index: 99999;
+  display: none;
+}
+
+.GoTop .showBtn {
+  width: 100%;
+  height: 62px;
+  background: #39543e;
+  margin-bottom: 10px;
+}
+
+.GoTop .showBtn p {
+  padding: 0 0 15px 15px;
+}
+
+.GoTop .showBtn a {
+  display: block;
+  height: 62px;
+  width: 62px;
+  text-align: center;
+  float: right;
+  background: #c1d715;
+}
+
+.GoTop .showBtn a:before {
+  content: "";
+  background: url(~/assets/images/icon.png) -122px -82px no-repeat;
+  background-size: 200px 200px;
+  width: 33px;
+  height: 37px;
+  display: block;
+  margin: 12px 0 0 14px;
+}
+
+.GoTop .showBtn i {
+  background: url(~/assets/images/icon.png) no-repeat;
+  background-size: 200px 200px;
+  margin-right: 5px;
+}
+
+.GoTop .showBtn i,
+.GoTop .showBtn strong {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 18px;
+  color: #fff;
+}
+
+.GoTop .showBtn i.marginT {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.GoTop .showBtn strong {
+  margin-right: 15px;
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.GoTop .showBtn img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: -20px;
+  margin-left: 15px;
+}
+
+.GoTop .showBtn i.TopIcon1 {
+  background-position: -121px 0;
+  width: 20px;
+  height: 20px;
+}
+
+.GoTop .showBtn i.TopIcon2 {
+  background-position: -96px 0;
+  width: 20px;
+  height: 16px;
+}
+
+.GoTop .showBtn i.TopIcon3 {
+  background-position: -144px 0;
+  width: 27px;
+  height: 21px;
+}
+
+
+/*end GoTop*/
+
+
+
+
+/*高级搜索*/
+
+
+/*6、7、8、11页面公用*/
+
+.AdSearch {
+  width: 100%;
+  height: 394px;
+  background: url(~/assets/images/Hseach.jpg) no-repeat;
+}
+
+.AdSearchBox {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.AdSearchBox h3 {
+  font-size: 48px;
+  line-height: 50px;
+  margin-top: 80px;
+  color: #fff;
+  text-align: center;
+}
+
+.AdSearchBox .searchTxt {
+  padding: 40px 10px;
+}
+
+.AdSearchBox .searchTxt input {
+  border: none;
+  background: #fff;
+  height: 47px;
+  line-height: 47px;
+  width: 790px;
+  padding-left: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.AdSearchBox .searchTxt .searchBtn {
+  width: 144px;
+  height: 47px;
+  line-height: 47px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background: #bed600;
+  display: block;
+  float: right;
+  padding-left: 20px;
+}
+
+.AdSearchBox .searchTxt .searchBtn:before {
+  width: 20px;
+  height: 20px;
+  background: url(~/assets/images/icon.png) -262px -4px no-repeat;
+  margin-left: 30px;
+  margin-top: 15px;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+
+/*end 高级搜索*/
+
+
+/*search 2 BuyHouse买房*/
+
+.searchCity {
+  width: 100%;
+  height: 1000px;
+  background: url(~/assets/images/seachBg.jpg) top center no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.searchCity .searchBox {
+  width: 1072px;
+  height: 480px;
+  background: rgba(255, 255, 255, 0.9);
+  line-height: 45px;
+  position: absolute;
+  left: 50%;
+  margin-left: -536px;
+  top: 50%;
+  margin-top: -248px;
+}
+
+.searchBox h3 {
+  font-size: 42px;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.searchBox p {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.searchVal {
+  width: 835px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.selectNew {
+  width: 130px;
+  background: #fff;
+  float: left;
+}
+
+.selectNew strong {
+  height: 48px;
+  line-height: 48px;
+  display: block;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  font-weight: normal;
+}
+
+.selectNew strong i {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #bed600;
+  margin-left: 15px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+}
+
+.checkNew {
+  height: auto;
+  width: 130px;
+  position: absolute;
+  left: 0;
+  top: 48px;
+  background: #fff;
+}
+
+.checkNew a {
+  display: block;
+  height: 48px;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  color: #111213;
+}
+
+.checkNew a:hover {
+  background: #bed600;
+  color: #fff;
+}
+
+.searchName {
+  width: 566px;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 10px;
+  background: #fff;
+  margin-left: 1px;
+  float: left;
+  position: relative;
+}
+
+.clickCityLink {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 566px;
+}
+
+.clickCityLink a {
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0 18px;
+  display: inline-block;
+  color: #111213;
+  float: left;
+}
+
+.clickCityLink a:hover {
+  color: #b5cb0a;
+}
+
+.searchName input {
+  border: none;
+  border-left: 3px solid #bed600;
+  height: 18px;
+  line-height: 18px;
+  font-size: 16px;
+  color: #999;
+  vertical-align: middle;
+  display: block;
+  margin: 14px 0;
+  width: 90%;
+  padding-left: 2px;
+}
+
+.btnSearch {
+  width: 117px;
+  float: right;
+}
+
+.btnSearch .BtnS {
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+  background: #25432a;
+  padding-left: 20px;
+  font-size: 17px;
+}
+
+.btnSearch .BtnS:before {
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  background: url(~/assets/images/icon.png) -262px -4px no-repeat;
+  margin-left: 10px;
+  margin-top: 15px;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.btnSearch .moreSearchBtn {
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: #111213;
+}
+
+.moreHouse {
+  overflow: hidden;
+  text-align: center;
+  clear: both;
+  margin-top: 155px;
+}
+
+.moreHouse a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #111213;
+  font-size: 24px;
+}
+
+.moreHouse a:hover {
+  text-decoration: underline;
+}
+
+
+/*3rentingHouse 租房搜索*/
+
+.rentingSearch .searchBox p {
+  margin-bottom: 0;
+}
+
+.searchVal .tit {
+  overflow: hidden;
+  text-align: center;
+  margin: 10px 0 30px;
+}
+
+.searchVal .tit a {
+  display: inline-block;
+  padding: 0px 15px;
+  font-size: 20px;
+  border-bottom: solid 2px #000;
+  line-height: 28px;
+  margin: 0 30px;
+  font-weight: 800;
+  color: #000;
+  position: relative;
+}
+
+.searchVal .tit a i {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #000;
+  margin-right: 3px;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 29px;
+  margin-left: -2px;
+}
+
+.rentingSearch .clickCityLink {
+  width: 706px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.rentingSearch .clickCityLink a {
+  display: block;
+  float: inherit;
+  color: #000;
+}
+
+.rentingSearch .clickCityLink a:hover {
+  color: #000;
+  background: #c6d82c;
+}
+
+.searchVal .tit a.active i {
+  display: block;
+}
+
+.searchCity.rentingSearch {
+  background: url(~/assets/images/rentingSeachBg.jpg) top center no-repeat;
+}
+
+.searchCity.rentingSearch .searchBox {
+  height: 432px;
+  margin-top: -216px;
+}
+
+.rentingSearch .searchName {
+  width: 696px;
+}
+
+.rentingSearch .searchName input {
+  border: none;
+  padding-left: 8px;
+  color: #000;
+}
+
+
+/*end 租房搜索*/
+
+
+/*有房出售*/
+
+.searchCity.haveHouseBg {
+  background: url(~/assets/images/haveHouse_sale.jpg) top center no-repeat;
+  position: relative;
+}
+
+.haveHouseBg h2,
+.roomRental h2 {
+  color: #fff;
+  font-size: 60px;
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -350px;
+  top: 50%;
+  margin-top: -150px;
+}
+
+.haveHouseBg a,
+.roomRental a {
+  width: 300px;
+  text-align: center;
+  height: 68px;
+  line-height: 68px;
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  bottom: 165px;
+  background: #c6d82c;
+}
+
+
+/*end 有房出售*/
+
+
+/*有房出租*/
+
+.searchCity.roomRental {
+  background: url(~/assets/images/roomRentalBg.jpg) top center no-repeat;
+  position: relative;
+}
+
+
+/*end 有房出租*/
+
+
+/*end search*/
+
+
+/*index-main*/
+
+.content,
+.ShareLink,
+.MSuccess {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main,
+.MsuccessBox,
+.ShareBox {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.mainIndex {
+  padding: 50px 24px 40px;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.IndexTit {
+  padding-bottom: 20px;
+  background: url(~/assets/images/title_line.png) center bottom no-repeat;
+  text-align: center;
+  line-height: 35px;
+  margin-bottom: 40px;
+}
+
+.IndexTit h3 {
+  font-size: 30px;
+}
+
+.IndexTit p {
+  font-size: 20px;
+}
+
+.BtnLink {
+  min-height: 250px;
+}
+
+.BtnLink a {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  position: relative;
+  height: 250px;
+  color: #000;
+  float: left;
+  margin-bottom: 25px;
+}
+
+.BtnLink a i {
+  display: block;
+  width: 133px;
+  height: 153px;
+  background: url(~/assets/images/index_tab.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -66px;
+}
+
+.BtnLink a i.LinkIcon1 {
+  background-position: 0 0;
+}
+
+.BtnLink a i.LinkIcon1:hover,
+.BtnLink a i.LinkIcon1.active {
+  background-position: 0 -153px;
+}
+
+.BtnLink a i.LinkIcon2 {
+  background-position: -133px 0;
+}
+
+.BtnLink a i.LinkIcon2:hover,
+.BtnLink a i.LinkIcon2.active {
+  background-position: -133px -153px;
+}
+
+.BtnLink a i.LinkIcon3 {
+  background-position: -266px 0;
+}
+
+.BtnLink a i.LinkIcon3:hover,
+.BtnLink a i.LinkIcon3.active {
+  background-position: -266px -153px;
+}
+
+.BtnLink a i.LinkIcon4 {
+  background-position: -399px 0;
+}
+
+.BtnLink a i.LinkIcon4:hover,
+.BtnLink a i.LinkIcon4 .active {
+  background-position: -399px -153px;
+}
+
+.BtnLink a p {
+  margin-top: 170px;
+}
+
+.BtnLink a p span,
+.BtnLink a p strong {
+  display: block;
+}
+
+.BtnLink a p strong {
+  font-size: 36px;
+}
+
+.BtnLink a p span {
+  color: #555555;
+  font-size: 20px;
+}
+
+
+/*购买页TwoActive*/
+
+.TwoActive,
+.fourActive {
+  padding: 0 30px;
+}
+
+.BtnLink.TwoActive a,
+.BtnLink.fourActive a {
+  height: auto;
+}
+
+.BtnLink.TwoActive a i {
+  display: block;
+  width: 111px;
+  height: 118px;
+  background: url(~/assets/images/buyHouse.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -55px;
+}
+
+.BtnLink.TwoActive a p {
+  margin-top: 133px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon1,
+.BtnLink.fourActive a i.LinkIcon1 {
+  background-position: 0 0;
+}
+
+.BtnLink.TwoActive a i.LinkIcon1:hover,
+.BtnLink.TwoActive a i.LinkIcon1.active,
+.BtnLink.fourActive a i.LinkIcon1:hover,
+.BtnLink.fourActive a i.LinkIcon1.active {
+  background-position: 0 -118px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon2,
+.BtnLink.fourActive a i.LinkIcon2 {
+  background-position: -111px 0;
+}
+
+.BtnLink.TwoActive a i.LinkIcon2:hover,
+.BtnLink.TwoActive a i.LinkIcon2.active,
+.BtnLink.fourActive a i.LinkIcon2:hover,
+.BtnLink.fourActive a i.LinkIcon2.active {
+  background-position: -111px -118px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon3,
+.BtnLink.fourActive a i.LinkIcon3 {
+  background-position: -222px 0;
+}
+
+.BtnLink.TwoActive a i.LinkIcon3:hover,
+.BtnLink.TwoActive a i.LinkIcon3.active,
+.BtnLink.fourActive a i.LinkIcon3:hover,
+.BtnLink.fourActive a i.LinkIcon3.active {
+  background-position: -222px -118px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon4,
+.BtnLink.fourActive a i.LinkIcon4 {
+  background-position: -333px 0;
+}
+
+.BtnLink.TwoActive a i.LinkIcon4:hover,
+.BtnLink.TwoActive a i.LinkIcon4.active,
+.BtnLink.fourActive a i.LinkIcon4:hover,
+.BtnLink.fourActive a i.LinkIcon4.active {
+  background-position: -333px -118px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon5 {
+  background-position: 0 -237px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon5:hover,
+.BtnLink.TwoActive a i.LinkIcon1.active {
+  background-position: 0 -355px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon6 {
+  background-position: -111px -236px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon6:hover,
+.BtnLink.TwoActive a i.LinkIcon6.active {
+  background-position: -111px -354px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon7 {
+  background-position: -222px -236px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon7:hover,
+.BtnLink.TwoActive a i.LinkIcon3.active {
+  background-position: -222px -354px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon8 {
+  background-position: -333px -236px;
+}
+
+.BtnLink.TwoActive a i.LinkIcon8:hover,
+.BtnLink.TwoActive a i.LinkIcon4.active {
+  background-position: -333px -354px;
+}
+
+
+/*newsList  最新资讯*/
+
+.MSuccess .newsList,
+.proFirst,
+.proLine {
+  overflow: hidden;
+}
+
+.proLine {
+  margin-top: 20px;
+  clear: both;
+}
+
+.mar_r20 {
+  margin-right: 20px;
+}
+
+.mar_b20 {
+  margin-bottom: 20px;
+}
+
+.proLine .proLineBox {
+  width: 380px;
+  float: left;
+}
+
+.proLine .proLineBox img {
+  height: 180px;
+}
+
+.newsList .newListLt {
+  width: 780px;
+  float: left;
+  margin-right: 20px;
+}
+
+.newsList img {
+  float: left;
+  height: 340px;
+}
+
+.newsList p {
+  height: 50px;
+  padding: 5px 0;
+  background: #a9be2c;
+  line-height: 25px;
+  width: 100%;
+  float: left;
+}
+
+.newsList p strong {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.newsList p a {
+  font-size: 14px;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.IndexTit p a {
+  color: #000;
+}
+
+.newListRt {
+  width: 400px;
+  float: right;
+  overflow: hidden;
+}
+
+.newListRtBox {
+  overflow: hidden;
+}
+
+.newListRtBox img {
+  height: 260px;
+}
+
+.MsuccessBox.w1200 {
+  width: 1200px;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.MSuccess.buyHouseBg {
+  background: #fff;
+}
+
+
+/*end 最新资讯*/
+
+
+/*end 购买页*/
+
+
+/*租房 ThreeActive*/
+
+.ThreeActive {
+  padding: 0 30px;
+}
+
+.BtnLink.ThreeActive a {
+  width: 20%;
+  height: auto;
+}
+
+.BtnLink.ThreeActive a i {
+  display: block;
+  width: 111px;
+  height: 118px;
+  background: url(~/assets/images/buyHouse.png) no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -55px;
+}
+
+.BtnLink.ThreeActive a p {
+  margin-top: 133px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon1 {
+  background-position: 0 0;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon1:hover,
+.BtnLink.ThreeActive a i.LinkIcon1.active {
+  background-position: 0 -118px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon5 {
+  background-position: -444px 0;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon5:hover,
+.BtnLink.ThreeActive a i.LinkIcon5.active {
+  background-position: -444px -118px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon6 {
+  background-position: -444px -236px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon6:hover,
+.BtnLink.ThreeActive a i.LinkIcon6.active {
+  background-position: -444px -354px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon4 {
+  background-position: -333px 0;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon4:hover,
+.BtnLink.ThreeActive a i.LinkIcon4.active {
+  background-position: -333px -118px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon7 {
+  background-position: -555px 0;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon7:hover,
+.BtnLink.ThreeActive a i.LinkIcon7.active {
+  background-position: -555px -118px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon12 {
+  background-position: -555px -236px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon12:hover,
+.BtnLink.ThreeActive a i.LinkIcon12.active {
+  background-position: -555px -354px;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon13 {
+  background-position: -222px 0;
+}
+
+.BtnLink.ThreeActive a i.LinkIcon13:hover,
+.BtnLink.ThreeActive a i.LinkIcon13.active {
+  background-position: -222px -118px;
+}
+
+
+/*end 租房 ThreeActive*/
+
+
+/*有房出售  有房出租  公共部分*/
+
+
+/*服务流程*/
+
+.MSuccess.hoveHouseBg {
+  background: #fff;
+}
+
+.hoveHouseBg .MsuccessBox {
+  width: 1200px;
+}
+
+.liucheng {}
+
+.liucheng img {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.liucheng strong b {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -75px;
+  width: 100%;
+}
+
+.liucheng strong {
+  display: inline-block;
+  width: 150px;
+  height: 130px;
+  position: relative;
+  text-align: center;
+  float: left;
+  font-size: 18px;
+}
+
+.liucheng span {
+  display: block;
+  float: left;
+  width: 60px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 120px;
+  text-align: center;
+}
+
+
+/*案例展示*/
+
+.MsuccessBox .Fexport li {
+  width: 230px;
+  float: left;
+  margin: 0 17px;
+}
+
+.MsuccessBox .Fexport li img {
+  width: 230px;
+  height: 260px;
+}
+
+.MsuccessBox .Fexport a {
+  color: #555555;
+}
+
+.MsuccessBox .Fexport p {
+  padding: 0 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.MsuccessBox .Fexport strong {
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.MsuccessBox .Fexport ul {
+  margin-bottom: 0;
+}
+
+
+/*end 有房出售  有房出租  公共部分*/
+
+
+/*品致家成就*/
+
+.MSuccess {
+  background: #f3f3f3;
+}
+
+.MsuccessBox {
+  width: 1060px;
+  margin: 70px auto;
+  padding: 0 75px;
+  overflow: hidden;
+}
+
+.MsuccessBox ul {
+  overflow: hidden;
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.MsuccessBox li {
+  width: 25%;
+  text-align: center;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.MsuccessBox li h2 {
+  font-size: 36px;
+  color: #c1d715;
+}
+
+.MSuccessBox li p {
+  font-size: 24px;
+}
+
+.SuccessMore {
+  overflow: hidden;
+}
+
+.SuccessMore .btnMore {
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  width: 350px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  background: #25432a;
+  text-align: center;
+}
+
+
+/*与品致家同步*/
+
+.ShareBox h2 {
+  text-align: center;
+  color: #c1d715;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.ShareBox p {
+  overflow: hidden;
+  width: 380px;
+  margin: 6px auto 18px;
+}
+
+.ShareBox p a {
+  display: inline-block;
+  margin: 0 30px;
+  float: left;
+  text-align: center;
+  background: url(~/assets/images/icon.png) no-repeat;
+  background-size: 110px 110px;
+}
+
+.ShareBox p a.icon1 {
+  width: 31px;
+  height: 25px;
+  background-position: 0 -17px;
+  margin-top: 1px;
+}
+
+.ShareBox p a.icon2 {
+  width: 34px;
+  height: 28px;
+  background-position: -33px -17px;
+}
+
+.ShareBox p a.icon3 {
+  width: 28px;
+  height: 28px;
+  background-position: 0 -45px;
+}
+
+.ShareBox p a.icon4 {
+  width: 29px;
+  height: 25px;
+  background-position: -34px -45px;
+  margin-top: 1px;
+}
+
+
+/*end index main*/
