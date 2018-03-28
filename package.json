@@ -1,8 +1,8 @@
 {
-  "name": "品致家",
+  "name": "priplus",
   "version": "1.0.0",
-  "description": "品致家",
-  "author": "品致家",
+  "description": "priplus",
+  "author": "priplus",
   "private": false,
   "dependencies": {
     "axios": "^0.16.2",
