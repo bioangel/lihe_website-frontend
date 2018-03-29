@@ -11,7 +11,7 @@
       </div>
       <footer-view></footer-view>
       <loading></loading>
-      <tool-view></tool-view>
+      <tool></tool>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@ require("babel-polyfill");
 import EventBus from '~/utils/event-bus'
 import headerView from '~/components/layout/header.vue'
 import footerView from '~/components/layout/footer.vue'
-import { loading } from '~/components/layout'
+import { loading, tool } from '~/components/layout'
 export default {
   name: 'app',
   head() {
@@ -34,7 +34,8 @@ export default {
   components: {
     headerView,
     footerView,
-    loading
+    loading,
+    tool
   },
   computed: {
     hideHeader() {

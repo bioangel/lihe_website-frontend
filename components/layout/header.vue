@@ -48,13 +48,19 @@
           </div>
         </div>
       </div>
-      <div class="topBarMainRt">
-        <h2>400 1818 840</h2>
+      <div class="topBarMainRt topBarLink">
+        <h2 class="fr">咨询电话：400 1818 840</h2>
+        <a href="#">
+          < 返回上页</a>
+            <a href="#">购买房产</a>
+            <a href="#">区块分析</a>
+            <a href="#">购房指南</a>
+            <a href="#">会员中心</a>
       </div>
     </div>
     <div class="RightLinks">
-      <div class="tit" @click="toggle"></div>
-      <div class="links" v-if="isShowLinks">
+      <div class="tit"></div>
+      <div class="links">
         <a href="#">登录</a>
         <a href="#">注册</a>
         <a href="#">下载APP</a>
@@ -70,8 +76,7 @@ export default {
   data() {
     return {
       preload: false,
-      classfiyShow: false,
-      isShowLinks: false
+      classfiyShow: false
     }
   },
   computed: {
@@ -88,11 +93,7 @@ export default {
       return this.$route.path.indexOf('register') > -1
     }
   },
-  methods: {
-    toggle() {
-      this.isShowLinks = !this.isShowLinks;
-    }
-  },
+  methods: {},
   mounted() {}
 }
 

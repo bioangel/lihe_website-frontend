@@ -110,6 +110,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*topBar*/
 
 .topBar {
@@ -140,12 +146,20 @@ body input {
 
 .selectCity {
   padding-top: 25px;
+  z-index: 9999;
+  &:hover {
+    .selectBox {
+      display: block;
+    }
+  }
 }
 
 .lineCity {
   color: #bed600;
   padding-left: 30px;
   float: left;
+  position: relative;
+  width: 140px;
 }
 
 .lineCity span,
@@ -159,6 +173,8 @@ body input {
 
 .lineCity strong {
   margin-right: 10px;
+  position: absolute;
+  z-index: 9999;
 }
 
 .lineCity strong i {
@@ -176,24 +192,28 @@ body input {
   height: 23px;
   background: url(~/assets/images/icon.png) no-repeat;
   background-size: 250px 250px;
+  position: absolute;
+  z-index: 9999;
 }
 
 .lineCity span.icon3 {
   background-position: 0 0;
+  right: 40px;
 }
 
 .lineCity span.icon4 {
   background-position: -31px 0;
+  right: 0;
 }
 
 .selectBox {
   overflow: hidden;
   clear: both;
   width: 360px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fffc;
   position: absolute;
-  top: 55px;
-  padding: 30px 20px 20px;
+  padding: 55px 20px 20px;
+  z-index: 10;
   display: none;
 }
 
@@ -265,6 +285,12 @@ body input {
 
 
 
+
+
+
+
+
+
 /*移动下拉*/
 
 .RightLinks {
@@ -278,6 +304,11 @@ body input {
   right: 0;
   top: 0;
   cursor: pointer;
+  &:hover {
+    .links {
+      display: block;
+    }
+  }
 }
 
 .RightLinks .tit {
@@ -298,6 +329,7 @@ body input {
   right: 0;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 999;
+  display: none;
 }
 
 .RightLinks .links a {
@@ -313,6 +345,12 @@ body input {
   color: #fff;
   background: #c1d80d;
 }
+
+
+
+
+
+
 
 
 /*topBar2*/
@@ -332,6 +370,12 @@ body input {
   margin: 0;
   display: inline-block;
 }
+
+
+
+
+
+
 
 
 /*end topBar*/
@@ -452,6 +496,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*Two footer*/
 
 .TwoFooter .footerLt dl {
@@ -498,6 +548,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*end Two footer*/
 
 
@@ -534,6 +590,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*end There footer*/
 
 
@@ -543,6 +605,12 @@ body input {
   padding-left: 0;
   width: 810px;
 }
+
+
+
+
+
+
 
 
 /*end last footer*/
@@ -643,9 +711,13 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*end GoTop*/
-
-
 
 
 /*高级搜索*/
@@ -711,6 +783,12 @@ body input {
   display: block;
   position: absolute;
 }
+
+
+
+
+
+
 
 
 /*end 高级搜索*/
@@ -908,6 +986,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*3rentingHouse 租房搜索*/
 
 .rentingSearch .searchBox p {
@@ -986,6 +1070,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*end 租房搜索*/
 
 
@@ -1025,6 +1115,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*end 有房出售*/
 
 
@@ -1034,6 +1130,12 @@ body input {
   background: url(~/assets/images/roomRentalBg.jpg) top center no-repeat;
   position: relative;
 }
+
+
+
+
+
+
 
 
 /*end 有房出租*/
@@ -1162,6 +1264,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*购买页TwoActive*/
 
 .TwoActive,
@@ -1274,6 +1382,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*newsList  最新资讯*/
 
 .MSuccess .newsList,
@@ -1364,6 +1478,12 @@ body input {
 .MSuccess.buyHouseBg {
   background: #fff;
 }
+
+
+
+
+
+
 
 
 /*end 最新资讯*/
@@ -1462,6 +1582,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*end 租房 ThreeActive*/
 
 
@@ -1516,6 +1642,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*案例展示*/
 
 .MsuccessBox .Fexport li {
@@ -1550,6 +1682,12 @@ body input {
 .MsuccessBox .Fexport ul {
   margin-bottom: 0;
 }
+
+
+
+
+
+
 
 
 /*end 有房出售  有房出租  公共部分*/
@@ -1607,6 +1745,12 @@ body input {
 }
 
 
+
+
+
+
+
+
 /*与品致家同步*/
 
 .ShareBox h2 {
@@ -1657,6 +1801,12 @@ body input {
   background-position: -34px -45px;
   margin-top: 1px;
 }
+
+
+
+
+
+
 
 
 /*end index main*/
