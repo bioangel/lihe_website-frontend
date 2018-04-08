@@ -3,7 +3,7 @@
     <div class="topBarMain">
       <div class="topBarMainLt">
         <div class="logo">
-          <a href="index.html"><img src="~/assets/images/logo.jpg" alt=""></a>
+          <a href="/"><img src="~/assets/images/logo.jpg" alt=""></a>
         </div>
         <div class="selectCity">
           <div class="lineCity">
@@ -50,9 +50,9 @@
       </div>
       <div class="topBarMainRt topBarLink">
         <h2 class="fr">咨询电话：400 1818 840</h2>
-        <a href="#">
+        <a href="#" v-if="!isShowReturn">
           < 返回上页</a>
-            <a href="#">购买房产</a>
+            <a href="/buyHouse">购买房产</a>
             <a href="#">区块分析</a>
             <a href="#">购房指南</a>
             <a href="#">会员中心</a>
@@ -91,6 +91,9 @@ export default {
     },
     isRegister() {
       return this.$route.path.indexOf('register') > -1
+    },
+    isShowReturn() {
+      return this.$route.path == '/';
     }
   },
   methods: {},

@@ -9,7 +9,7 @@
             <p>请点击下方按钮，开启您的英国置业之旅</p>
           </div>
           <div class="BtnLink">
-            <a href="#">
+            <a href="/buyHouse">
                         <i class="LinkIcon1"></i>
                         <p>
                             <strong>购买房产</strong>
